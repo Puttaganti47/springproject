@@ -109,13 +109,3 @@ Object.keys(works).forEach((key) => {
 
   navPanel.appendChild(btn);
 });
-
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.getElementById("splash_screen").style.opacity = "0"; // Fade out
-    setTimeout(() => {
-      document.getElementById("splash_screen").style.display = "none"; // Hide completely
-      document.querySelector(".mainContainer").style.display = "block"; // Show content
-    }, 500);
-  }, 2000);
-});
