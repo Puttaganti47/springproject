@@ -1,23 +1,5 @@
 [
     {
-      "id": "task-1",
-      "title": "Interactive Form Validation",
-      "description": "A responsive form with client-side validation and interactive feedback",
-      "url":"works/task1/index.html",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "date": "September 15, 2023",
-      "category": "Web Development"
-    },
-    {
-      "id": "task-2",
-      "title": "Interactive Form Validation",
-      "description": "A responsive form with client-side validation and interactive feedback",
-      "url":"works/task2/index.html",
-      "technologies": ["HTML", "CSS", "JavaScript"],
-      "date": "September 15, 2023",
-      "category": "Web Development"
-    },
-    {
       "id": "task-3",
       "title": "Interactive Form Validation",
       "description": "A responsive form with client-side validation and interactive feedback",
