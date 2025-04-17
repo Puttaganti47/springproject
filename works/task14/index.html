@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <input placeholder="enter A" id="input_a"/>
+        <input placeholder="enter B" id="input_b"/>
+        <button onclick="generate_random_value();">Generate random value</button>
+        <div id="output_div"></div>
+        <script>
+            function generate_random_value() {
+                // Get values from the input fields
+                let min_value = parseInt(document.getElementById("input_a").value);
+                let max_value = parseInt(document.getElementById("input_b").value);
+
+                // Ensure min_value is less than max_value using Math.min and Math.max
+                min_value = Math.min(min_value, max_value);
+                max_value = Math.max(min_value, max_value);
+
+                // Generate random value between min_value and max_value
+                let random_value = Math.floor(Math.random() * (max_value - min_value + 1)) + min_value;
+
+                // Generate a random color in hex format
+                let random_color = '#' + Math.floor(Math.random()*16777215).toString(16);
+
+                // Display the random value and change the text color
+                let outputDiv = document.getElementById("output_div");
+                outputDiv.innerHTML = "Random value: " + random_value;
+                outputDiv.style.color = random_color;
+
+                // Log a random value for debugging
+                let x = Math.random();
+                console.log(x);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Car Info Update</title>
+</head>
+<body>
+
+  <h1>Update Car Info</h1
+  <input type="text" id="a" placeholder="Enter new model">
+  
+  
+  <button onclick="updateCarInfo()">Update Car Info</button>
+
+  
+  <div id="div"></div>
+
+  <script>
+    const car = {
+        make:"kia",
+      model: "optima",
+      year: 2024,
+      color: "blue",
+      description: function() {
+        return `Model: ${this.model}, Year: ${this.year}, Color: ${this.color}`;
+      }
+    };
+    function updateCarInfo() {
+      const newModel = document.getElementById("a").value; 
+      car.model = newModel; 
+      document.getElementById("div").innerText = car.description(); 
+    }
+    document.getElementById("div").innerText = car.description();
+  </script>
+
+</body>
+</html>
