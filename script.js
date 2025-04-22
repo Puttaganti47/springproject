@@ -1,8 +1,32 @@
 const works = {
+  task1: {
+    title: "Task 1",
+    url: "works/task1/index.html",
+    description: "Expectation document",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    date: "January 14, 2025",
+    category: "Web Development",
+  },
+  task2: {
+    title: "Task 2",
+    url: "works/task2/index.html",
+    description: "custom designed page",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    date: "January 16, 2025",
+    category: "Web Development",
+  },
   task3: {
     title: "Task 3",
     url: "works/task3/index.html",
     description: "CSS HOVER",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    date: "January 28, 2025",
+    category: "Web Development",
+  },
+  task4: {
+    title: "Task 4",
+    url: "works/task3/index.html",
+    description: "custom dashboard",
     technologies: ["HTML", "CSS", "JavaScript"],
     date: "January 28, 2025",
     category: "Web Development",
@@ -13,6 +37,14 @@ const works = {
     description: "Arthematic operations",
     technologies: ["HTML", "CSS", "JavaScript"],
     date: "January 30, 2025",
+    category: "Web Development",
+  },
+  task6: {
+    title: "Task 6",
+    url: "works/task6/index.html",
+    description: "Operations",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    date: "February 7, 2025",
     category: "Web Development",
   },
   task7: {
