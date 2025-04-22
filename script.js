@@ -25,7 +25,7 @@ const works = {
   },
   task4: {
     title: "Task 4",
-    url: "works/task3/index.html",
+    url: "works/task4/index.html",
     description: "custom dashboard",
     technologies: ["HTML", "CSS", "JavaScript"],
     date: "January 28, 2025",
