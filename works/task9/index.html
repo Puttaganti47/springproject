@@ -1,17 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grade Calculator</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grade Calculator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f3f4f6;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    label,
+    input,
+    button {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      font-size: 16px;
+      background-color: #4f46e5;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #4338ca;
+    }
+
+    #result {
+      font-size: 18px;
+      font-weight: bold;
+      color: #111827;
+    }
+  </style>
 </head>
+
 <body>
+  <div class="container">
     <h2>Grade Calculator</h2>
     <label for="score">Enter your score:</label>
-    <input type="number" id="score" min="0" max="100">
+    <input type="number" id="score" min="0" max="100" />
     <button onclick="calculateGrade()">Calculate</button>
     <p id="result"></p>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js">
+      const score = parseFloat(document.getElementById("score").value);
+      const result = document.getElementById("result");
+
+      if (isNaN(score) || score < 0 || score > 100) {
+        result.textContent = "Please enter a valid score between 0 and 100.";
+        return;
+      }
+
+      let grade = "";
+
+      if (score >= 90) grade = "A";
+      else if (score >= 80) grade = "B";
+      else if (score >= 70) grade = "C";
+      else if (score >= 60) grade = "D";
+      else grade = "F";
+
+      result.textContent = `Your grade is: ${grade}`;
+    }
+  </script>
 </body>
+
 </html>

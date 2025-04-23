@@ -34,7 +34,7 @@ const works = {
   task5: {
     title: "Task 5",
     url: "works/task5/index.html",
-    description: "Arthematic operations",
+    description: "Alert Message",
     technologies: ["HTML", "CSS", "JavaScript"],
     date: "January 30, 2025",
     category: "Web Development",
@@ -42,7 +42,7 @@ const works = {
   task6: {
     title: "Task 6",
     url: "works/task6/index.html",
-    description: "Operations",
+    description: "Arthematic Operations",
     technologies: ["HTML", "CSS", "JavaScript"],
     date: "February 7, 2025",
     category: "Web Development",
@@ -82,7 +82,7 @@ const works = {
   task11: {
     title: "Task 11",
     url: "works/task11/index.html",
-    description: "Enter value",
+    description: "Enter value to print stars",
     technologies: ["HTML", "CSS", "JavaScript"],
     date: "February 11, 2025",
     category: "Web Development",

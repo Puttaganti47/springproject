@@ -1,23 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Expectation document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expectation Document</title>
     <style>
-        .body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px 10px;
+                padding: 15px;
+            }
+
+            p {
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <h2>Expectation document</h2>
-    <p> By taking this course, I aim to deepen my knowledge and sharpen my hands-on skills from the ground up. My goal is to confidently build and deploy complete applications independently by the end of the course.
-
-        Additionally, I’m eager to master tools like the React framework and become highly proficient in them. I believe this course will play a key role in helping me achieve my long-term career goal of becoming an expert frontend developer and unlocking better job opportunities.</p>
-
+    <div class="container">
+        <h2>Expectation Document</h2>
+        <p>
+            By taking this course, I aim to deepen my knowledge and sharpen my hands-on skills from the ground up. My
+            goal is to confidently build and deploy complete applications independently by the end of the course.
+            <br><br>
+            Additionally, I’m eager to master tools like the React framework and become highly proficient in them. I
+            believe this course will play a key role in helping me achieve my long-term career goal of becoming an
+            expert frontend developer and unlocking better job opportunities.
+        </p>
+    </div>
 </body>
 
 </html>

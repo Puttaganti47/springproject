@@ -1,34 +1,73 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Custom Page</title>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+        }
+
+        .header_div,
+        .body_div,
+        .button_div {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
         .header_div {
             background-color: rgb(168, 159, 159);
-            margin: 10px;
-            padding: 10px;
-            border-radius: 4px;
-            text-align: center;
         }
 
         .body_div {
             background-color: rgb(137, 247, 247);
-            margin: 10px;
-            padding: 20px;
-            border-radius: 4px;
-            text-align: center;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         .button_div {
-            margin: 10px;
-            border-radius: 4px;
-            text-align: center;
+            background-color: #fff;
         }
 
         button {
-            padding: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        /* Responsive tweaks for smaller screens */
+        @media (max-width: 600px) {
+            .header_div,
+            .body_div,
+            .button_div {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .body_div {
+                font-size: 0.95rem;
+            }
+
+            button {
+                font-size: 0.95rem;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>

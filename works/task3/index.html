@@ -1,87 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Logo</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
+            margin: 0;
             padding: 25px;
-        }
-
-        .title {
-            color: #5C6AC4;
-        }
-
-        .google-logo {
-            display: flex;
-            font-size: 50px;
-        }
-
-        body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            font-family: sans-serif;
+            background-color: #f9f9f9;
         }
 
-        .letter1 {
-            color: red;
-            height: 80px;
-            width: 80px;
-            display: inline-block;
-        }
-
-        .letter2 {
-            color: lightseagreen;
-            height: 80px;
-            width: 80px;
-            display: inline-block;
+        .google-logo {
             display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
             justify-content: center;
-            align-items: center;
-        }
-
-        .letter3 {
-            color: lightseagreen;
-            height: 80px;
-            width: 80px;
-            display: inline-block;
-        }
-
-        .letter4 {
-            color: lightgreen;
-            height: 80px;
-            width: 80px;
-            display: inline-block;
-        }
-
-        .letter5 {
-            color: orange;
-            height: 80px;
-            width: 80px;
-            display: inline-block;
-        }
-
-        .letter6 {
-            color: yellow;
-            height: 80px;
-            width: 80px;
-            display: inline-block;
         }
 
         .box {
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 20vw;
+            max-width: 80px;
+            height: 20vw;
+            max-height: 80px;
+            font-size: 5vw;
+            max-font-size: 50px;
+            font-weight: bold;
+            transition: all 0.4s ease;
+            border-radius: 8px;
+        }
+
+        .letter1 {
+            color: red;
+        }
+
+        .letter2 {
+            color: lightseagreen;
+        }
+
+        .letter3 {
+            color: lightseagreen;
+        }
+
+        .letter4 {
+            color: lightgreen;
+        }
+
+        .letter5 {
+            color: orange;
+        }
+
+        .letter6 {
+            color: yellow;
         }
 
         .box:hover {
+            transform: scale(1.2);
+            background-color: #ddd;
             cursor: pointer;
-            scale: 1.4;
-            transition: all 0.5s;
-            background-color: gray;
+        }
+
+        @media (max-width: 500px) {
+            .box {
+                width: 18vw;
+                height: 18vw;
+                font-size: 6vw;
+            }
         }
     </style>
 </head>
