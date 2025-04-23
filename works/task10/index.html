@@ -1,20 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Call Stack Implementation</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Call Stack</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    input[type="text"] {
+      width: calc(100% - 120px);
+      padding: 10px;
+      margin-right: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      padding: 10px;
+      margin-top: 10px;
+    }
+
+    .task-list {
+      margin-top: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      background: #fafafa;
+      border-radius: 5px;
+    }
+
+    .task-item {
+      padding: 8px;
+      margin-bottom: 5px;
+      background-color: #e3e3e3;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 600px) {
+      input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      button {
+        width: 48%;
+        margin-right: 2%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <h1>Call Stack Implementation</h1>
-    <input type="text" id="taskInput" placeholder="Enter Task Name">
-    <button onclick="addTask()">Add Task</button>
-    <button onclick="undoTask()">Undo Task</button>
+  <h1>Task Call Stack</h1>
 
-    <h2>Process Line:</h2>
-    <p id="processLine"></p>
+  <input type="text" id="taskName" placeholder="Enter Task Name" />
+  <button onclick="addTask()">Add Task</button>
+  <button onclick="undoTask()">Undo Task</button>
 
-    <!-- ✅ Corrected filename -->
-    <script src="script.js"></script>
+  <div class="task-list">
+    <p><strong>Process Line:</strong></p>
+    <ul id="taskPipeline"></ul>
+  </div>
+
+  <script>
+    const taskStack = [];
+
+    function addTask() {
+      const taskName = document.getElementById('taskName').value;
+      if (taskName.trim() === '') {
+        alert("Please enter a task name.");
+        return;
+      }
+      taskStack.push(taskName);
+      document.getElementById('taskName').value = '';
+      updateTaskPipeline();
+    }
+
+    function undoTask() {
+      if (taskStack.length === 0) {
+        alert("No tasks to undo.");
+        return;
+      }
+      taskStack.pop();
+      updateTaskPipeline();
+    }
+
+    function updateTaskPipeline() {
+      const taskListElement = document.getElementById('taskPipeline');
+      taskListElement.innerHTML = '';
+      taskStack.forEach((task, index) => {
+        const taskItem = document.createElement('li');
+        taskItem.className = 'task-item';
+        taskItem.textContent = ${index + 1}. ${task};
+        taskListElement.appendChild(taskItem);
+      });
+    }
+  </script>
 </body>
+
 </html>
