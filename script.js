@@ -23,14 +23,14 @@ const works = {
     date: "January 28, 2025",
     category: "Web Development",
   },
-  task4: {
-    title: "Task 4",
-    url: "works/task4/index.html",
-    description: "custom dashboard",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    date: "January 28, 2025",
-    category: "Web Development",
-  },
+  // task4: {
+  //   title: "Task 4",
+  //   url: "works/task4/index.html",
+  //   description: "custom dashboard",
+  //   technologies: ["HTML", "CSS", "JavaScript"],
+  //   date: "January 28, 2025",
+  //   category: "Web Development",
+  // },
   task5: {
     title: "Task 5",
     url: "works/task5/index.html",
